@@ -1,0 +1,40 @@
+/**
+ * Schedule Calendar - View and manage schedules
+ */
+
+import React, { useState, useEffect } from 'react';
+import './styles.css';
+
+export default function ScheduleCalendar({ api }: any) {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    loadData();
+  }, []);
+
+  const loadData = async () => {
+    setLoading(true);
+    try {
+      // Load data from API
+    } catch (error) {
+      console.error('Failed to load data:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  if (loading) {
+    return <div className="loading">Loading...</div>;
+  }
+
+  return (
+    <div className="schedule-calendar">
+      <header>
+        <h1>Schedule Calendar</h1>
+      </header>
+      <main>
+        <p>View and manage schedules</p>
+      </main>
+    </div>
+  );
+}

@@ -1,0 +1,209 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  background: #0f172a;
+  color: #e2e8f0;
+  padding: 20px;
+}
+
+.payment-history {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.history-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.history-header h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #f1f5f9;
+}
+
+.total-banner {
+  background: linear-gradient(135deg, #10b981, #059669);
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+}
+
+.total-amount {
+  font-size: 24px;
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding: 20px;
+  background: #1e293b;
+  border-radius: 12px;
+  border: 1px solid #334155;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px 16px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 8px;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.search-input::placeholder {
+  color: #64748b;
+}
+
+.filters {
+  display: flex;
+  gap: 12px;
+}
+
+.filters select {
+  flex: 1;
+  padding: 10px 14px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-size: 14px;
+}
+
+.filters select:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.results-count {
+  text-align: right;
+  color: #94a3b8;
+  font-size: 14px;
+}
+
+.table-container {
+  background: #1e293b;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #334155;
+}
+
+.payments-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payments-table thead {
+  background: #0f172a;
+}
+
+.payments-table th {
+  padding: 16px;
+  text-align: left;
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #334155;
+}
+
+.payments-table tbody tr {
+  border-bottom: 1px solid #334155;
+  transition: background 0.15s;
+}
+
+.payments-table tbody tr:hover {
+  background: rgba(59, 130, 246, 0.05);
+  cursor: pointer;
+}
+
+.payments-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+.payments-table td {
+  padding: 16px;
+  font-size: 14px;
+  color: #e2e8f0;
+}
+
+.payment-id {
+  color: #3b82f6;
+  font-weight: 600;
+}
+
+.customer-name {
+  font-weight: 500;
+  color: #f1f5f9;
+}
+
+.job-id,
+.invoice-id {
+  color: #8b5cf6;
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.payment-method {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  text-transform: capitalize;
+  color: #94a3b8;
+}
+
+.amount {
+  font-weight: 700;
+  color: #10b981;
+  text-align: right;
+  font-size: 15px;
+}
+
+.status-badge {
+  padding: 4px 12px;
+  border-radius: 12px;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: capitalize;
+  display: inline-block;
+}
+
+.status-completed {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34d399;
+}
+
+.status-pending {
+  background: rgba(245, 158, 11, 0.15);
+  color: #fbbf24;
+}
+
+.status-failed {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
+.status-refunded {
+  background: rgba(139, 92, 246, 0.15);
+  color: #a78bfa;
+}
